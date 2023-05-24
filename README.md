@@ -39,7 +39,7 @@ on:
 permissions:
   issues: write
   contents: read
-  
+
 jobs:
   triage:
     runs-on: ubuntu-latest
@@ -78,7 +78,7 @@ on:
 permissions:
   issues: write
   contents: read
-  
+
 jobs:
   triage:
     runs-on: ubuntu-latest
@@ -123,7 +123,7 @@ on:
 permissions:
   issues: write
   contents: read
-  
+
 jobs:
   triage:
     runs-on: ubuntu-latest
@@ -133,6 +133,31 @@ jobs:
         configuration-path: .github/labeler.yml
         enable-versioned-regex: 0
         include-title: 1
+```
+
+### Example of *only* including the issue title, but not the body in the regex target
+
+Set `include-title: 1` and `include-body: 0`.
+
+```yml
+name: "Issue Labeler"
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: github/issue-labeler@v3.2 #May not be the latest version
+      with:
+        configuration-path: .github/labeler.yml
+        include-title: 1
+        include-body: 0
 ```
 
 ### Syncing Labels
