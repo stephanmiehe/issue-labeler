@@ -4,14 +4,14 @@ title: "Granting access to github/<repo> for @<handle>"
 labels: ["Waiting for Manager Review", "github"]
 
 body:
-- type: checkboxes
-  id: confirm
-  attributes:
-    label: This is a last resort
-    description: Security will only make repository access changes as a last resort. I confirm that I have attempted to reach out to existing administrators of the repository and they have either left the business or are otherwise unable to make the required changes (e.g. on leave)
-    options:
-      - label: Yes
-        required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: This is a last resort
+      description: Security will only make repository access changes as a last resort. I confirm that I have attempted to reach out to existing administrators of the repository and they have either left the business or are otherwise unable to make the required changes (e.g. on leave)
+      options:
+        - label: Yes
+          required: true
       
   - type: textarea
     id: reason
